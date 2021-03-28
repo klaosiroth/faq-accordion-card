@@ -8,6 +8,8 @@
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
+  <link rel="stylesheet" href="style.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,26 +17,62 @@
   </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+  <div class="card">
+    <div class="card__image">
+      <div class="card__image--wrapper">
+        <picture>
+          <source media="(min-width: 992px)" srcset="./images/illustration-woman-online-desktop.svg">
+          <img src="./images/illustration-woman-online-mobile.svg" alt="illustration woman online">
+        </picture>
+        <picture>
+          <source media="(min-width: 992px)" srcset="./images/bg-pattern-desktop.svg">
+          <img src="./images/bg-pattern-mobile.svg" alt="background pattern">
+        </picture>
+      </div>
+      <img src="./images/illustration-box-desktop.svg" alt="image box" class="card__image--box">
+    </div>
+    <div class="card__accordion">
+      <h2 class="card__title">FAQ</h2>
+      <div class="accordion">
+        <details class="accordion__item">
+          <summary class="accordion__header">How many team members can I invite?</summary>
+          <div class="accordion__panel" role="textbox">
+            <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+              team members for the Premium plan.</p>
+          </div>
+        </details>
+        <details class="accordion__item" open>
+          <summary class="accordion__header">What is the maximum file upload size?</summary>
+          <div class="accordion__panel" role="textbox">
+            <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+          </div>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__header">How do I reset my password?</summary>
+          <div class="accordion__panel" role="textbox">
+            <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.</p>
+          </div>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__header">Can I cancel my subscription?</summary>
+          <div class="accordion__panel" role="textbox">
+            <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+          </div>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__header">Do you provide additional support?</summary>
+          <div class="accordion__panel" role="textbox">
+            <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Natthaphon Wichainphong</a>.
   </div>
 </body>
 </html>
